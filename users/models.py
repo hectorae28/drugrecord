@@ -5,4 +5,4 @@ from django.contrib.auth.models import User
 class Profile(models.Model):
     user=models.OneToOneField(User, on_delete=models.CASCADE)
     create_account=models.DateTimeField(auto_now_add=True)
-    birthday=models.DateTimeField(blank=True)
+    birthday=models.DateTimeField(null=True)

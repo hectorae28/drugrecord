@@ -1,0 +1,11 @@
+{% block head_container %}
+    <title>Add new drug</title>
+{% endblock head_container %}
+
+{% block body_container %}
+    <form action="{% url 'drugs:add' %}" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button class="btn btn-primary btn-block mt-5" type="submit">New drug!</button>
+    </form>
+{% endblock body_container %}

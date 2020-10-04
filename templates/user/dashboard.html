@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block head_container %}
+  <title>dashboard {{request.user.username}}</title>
+{% endblock head_container %}
+
+{% block body_container %}
+    <div class="row mt-4">
+        <div class="col-sm-4">
+            <h2>
+                {{request.user.first_name}}
+                {{request.user.last_name}}
+
+            </h2>
+        </div>
+    </div>
+    <a href="{% url 'users:logout' %}">by!</a>
+    
+{% endblock body_container %}

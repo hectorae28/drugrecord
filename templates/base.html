@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset='UTF-8'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        {% block header_container %}
+        {% endblock %}
+
+        {% load static %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" crossorigin="anonymous">
+    </head>
+    <body>
+        <div class="container mt-5">
+            {% block body_container %}
+            {% endblock body_container %}
+        </div>
+
+    </body>
+</html>
